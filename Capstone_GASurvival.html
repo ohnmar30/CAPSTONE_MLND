@@ -2,10 +2,11 @@
 <html>
 <head><meta charset="utf-8" />
 
-<title>Capstone_STA</title>
+<title>Capstone_GASurvival</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
 
 
 <style type="text/css">
@@ -13112,6 +13113,39 @@ div#notebook {
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Project-Overview">Project Overview<a class="anchor-link" href="#Project-Overview">&#182;</a></h2><p>In our country, Telecom industry is getting growth and highly competitive market since last few years. So, all operators are struggling to maintain existing customers and to obtain new acquisition. Our company also trying to maintain the existing customers in various ways: by offering the attractive packs, making loyalty programs, propose high end customers to use postpaid plan, etc. To get the gross add customers, we are offering attractive newbies benefits such as free data usage, free voice.</p>
+<p>In here, some customers have used free benefit and churned out. So, we need know the behavior of GA customers who will be mature customers and still attach in our network. In this project, I will emphasize the quality GA who are still active and using our services in 3rd month after activation date. So that, our business team can do planning the appropriate program/campaigns to get the quality GA customers.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Problem-Statement">Problem Statement<a class="anchor-link" href="#Problem-Statement">&#182;</a></h2><p>Since the size of these data sources is impossible for a human analyst to come up with interesting information that will help in the decision-making process. Machine learning models are completely helping in this identifying those quality GA customers. With the experimental results I will demonstrate the performance of the models by statistical metrics like accuracy, sensitivity, precision, recall, etc. Regarding the higher scoring of these metrics, we will be able to judge the success of these models in predicting the quality GA customers.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Dataset">Dataset<a class="anchor-link" href="#Dataset">&#182;</a></h2><p>Monthly average gross addition count is ~ 0.8 Mn. And I will use the Jan-9 Gross add customers and predict who will be the quality GA in Mar-19.
+Since this data is our company data, I have already taken the prior approval from our company’s management. And I got the right to use since the customer’s details information is not included.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Importing-Libraries-and-Loading-Dataset">Importing Libraries and Loading Dataset<a class="anchor-link" href="#Importing-Libraries-and-Loading-Dataset">&#182;</a></h3>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
@@ -13345,6 +13379,13 @@ div#notebook {
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Counting-Null">Counting Null<a class="anchor-link" href="#Counting-Null">&#182;</a></h3>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
@@ -13399,6 +13440,13 @@ dtype: int64</pre>
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Analyzing-Data-Distribution">Analyzing Data Distribution<a class="anchor-link" href="#Analyzing-Data-Distribution">&#182;</a></h3>
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -13799,6 +13847,13 @@ dtype: int64</pre>
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Splitting-Features-and-Target-Data">Splitting Features and Target Data<a class="anchor-link" href="#Splitting-Features-and-Target-Data">&#182;</a></h3>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[6]:</div>
@@ -13857,6 +13912,14 @@ memory usage: 22.9+ MB
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Correlation-Matrix-of-each-attributes">Correlation Matrix of each attributes<a class="anchor-link" href="#Correlation-Matrix-of-each-attributes">&#182;</a></h3><p>According to the correlation matrix, mobile_rev column is highly correlated with og_revenue and pack revenue.</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
